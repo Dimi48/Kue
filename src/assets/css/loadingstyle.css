@@ -1,0 +1,14 @@
+.homePage .tick {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  width: 100px;
+}
+
+.homePage h2 {
+  color: #edebeb;
+  text-align: center;
+  padding: 0 50px;
+  font-size: 2em;
+}

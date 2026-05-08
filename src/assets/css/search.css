@@ -1,0 +1,235 @@
+.searchContainer {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+/* Search Section */
+
+/* background */
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(56deg, #551448 0%, #000000 50%, #551448 100%);
+}
+
+.search .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+  width: 100%;
+  height: 80%;
+}
+
+.search .container form {
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+  background: linear-gradient(90deg, rgba(99,77,160,1) 0%, rgba(85,20,72,1) 100%);
+  border-radius: 40px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+/* logo */
+.search .container header {
+  margin-bottom: 50px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.search .container header img {
+  width: 14em;  
+}
+
+/* search bar */
+.search input {
+  padding: 13px;
+  width: 80%;
+  margin-left: 60px;
+  margin-right: -10px;
+  border-radius: 40px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  display: inline-block;
+  color: rgb(253,253,253);
+}
+
+.search input::placeholder {
+  color: rgb(253,253,253, 0.7);
+}
+
+/* form button */
+.search form button {
+  background-color: transparent;
+  display: inline-block;
+  border: none;
+  border-radius: 40px;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* search icon */
+.search #btnSearch {
+  left: 5%;
+}
+
+.search #btnSearch img {
+  width: 1.8em;
+  height: 1.8em
+}
+
+/* delete icon */
+.search .btnDelete {
+  right: 5%;
+}
+
+.search .btnDelete img {
+  width: 1.2em;
+  height: 1.2em
+}
+
+/* tracks section */
+.songDisplay {
+  margin-bottom: 25px;
+  width: 100%;
+  display: grid;
+  grid-gap: 20px;
+}
+
+.songDisplay .tracks {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.songDisplay .tracks:hover {
+  background-color: #212020;
+}
+
+.songDisplay .track-row {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  padding: 15px 0px 0px 15px;
+}
+
+/* song track and artist */
+.songDisplay .track-info {
+  flex: 0 0  auto;
+  width: 440px;
+  text-decoration: none;
+  float: left;
+}
+
+.songDisplay .track-row  img {
+  width: 45px;
+  height: 45px;
+}
+
+.songDisplay .track-info ul {
+  list-style: none;
+  line-height: 28px;
+  margin-top: -5px;
+  margin-left: -35px;
+}
+
+.songDisplay .track-info li {
+  display: list-item;
+  padding-left: 15px;
+}
+
+/* song track */
+.songDisplay .track-info .title {
+  font-weight: bold;
+  margin-top: -5px;
+}
+
+/* song artist */
+.songDisplay .track-info .artist {
+  font-size: 13px;
+  font-weight: 550;
+  color: #9f9c9c;
+}
+
+/* expliciit */
+.songDisplay .track-info .artist .explicit {
+  color: black;
+  border-radius: 2px;
+  font-size: 9px;
+  background-color: grey;
+  height: 17px;
+  text-align: center;
+  width: 16px;
+  line-height: 17px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.songDisplay .track-time {
+  width: calc(100% - 505px);
+  overflow: auto;
+}
+
+.songDisplay .track-time p.time{
+  float: right;
+  color: #979696;
+  font-weight: 550;
+  font-size: 15px;
+}
+
+/* Responsiveness*/
+@media (max-width: 625px) {
+  .search input {
+    font-size: 1.2rem;
+    padding: 12px;
+    margin-right: -10px;
+    width: 80%;
+  }
+  .songDisplay .track-info {
+    width: 340px;
+  }
+  .songDisplay .track-time {
+    width: calc(100% - 385px);
+  } 
+}
+
+@media (max-width: 535px) {
+  .search input {
+    font-size: 0.9rem;
+    margin-left: 38px;
+  }
+  .search .songDisplay .track-info.title {
+    font-size: 15px;
+  }
+  .search #btnSearch img {
+    width: 1.4em;
+    height: 1.4em;
+  }
+  .search .btnDelete img {
+    width: 1em; 
+    height: 1em;
+  }
+  .search #topTitle {
+    font-size: 1.2rem;
+  }
+  .songDisplay .track-info {
+    width: 220px;
+  }
+  .songDisplay .track-time {
+    width: calc(100% - 265px);
+  }
+}
+

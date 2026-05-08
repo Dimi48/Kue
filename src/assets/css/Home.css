@@ -1,0 +1,217 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+@font-face {
+    font-family: ProximaNova;
+    src: url(../fonts/ProximaNova.otf);
+}
+
+@font-face {
+    font-family: Proxima;
+    src: url(../fonts/ProximaNova-Light.otf);
+    font-weight: lighter;
+    text-decoration: none !important;
+}
+
+@font-face {
+    font-family: Proxima Bold;
+    src: url(../fonts/ProximaNova-Bold.otf);
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+.homeContainer {
+    font-family: 'ProximaNova', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Locked to exactly 1 screen height to prevent scrolling */
+    width: 100vw; /* Stretched to edges */
+    background: linear-gradient(56deg, #551448 0%, #000000 50%, #551448 100%);
+    overflow: hidden; 
+    box-sizing: border-box;
+}
+
+.home .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .container header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+  
+.home .container header .logo {
+    width: 14em;  
+}
+
+.home .container header .ClubLine {
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0.47) 0%, rgb(220, 20, 122) 50%, rgb(142, 118, 157) 100%) 1 / 1 / 0 stretch;
+    margin-top: 15px;
+    border-bottom: 3px solid transparent;
+}
+
+.home .container header .ClubLine .X {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 1.5em;
+}
+
+.home .container header .ClubLine .Club {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+    margin-bottom: 10px;
+}
+
+.home .homePage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homePage h1 {
+    font-family: Proxima Bold;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(to right, rgba(103, 168, 175, 1) 0%, rgba(234, 2, 120, 1)60%, rgba(97, 226, 186, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animation 300s linear infinite;
+    padding: 10px 15px; /* Vertical padding fixes the text clipping */
+    line-height: 1.4; /* Line height fix */
+    font-size: 2em;
+    margin: 0;
+}
+
+.homePage h3 {
+    color: #edebeb;
+    text-align: center;
+    padding: 0 50px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-top: 10px;
+}
+
+@keyframes animation {
+    to {
+        background-position: 4500vh;
+    }
+}
+
+.homePage main {
+    width: 100%;
+}
+
+.homePage .search-button {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Perfectly spaces the buttons evenly */
+    margin-top: 2rem;
+}
+
+.homePage button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 180px; 
+    height: 180px;
+    font-family: Proxima;
+    background: linear-gradient(135deg, #c67191bd 0%, #4e3a86a6 42%, #551448d4 100%);
+    text-transform: uppercase;
+    border-radius: 20px;
+    border: none;
+    font-size: 19px;
+    color: white;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; /* Slight pop on hover for desktop */
+}
+
+.homePage button img {
+    margin-bottom: 18px;
+    width: 60px;
+}
+
+.homePage button:hover {
+    background: linear-gradient(rgb(15, 15, 15), rgb(15, 15, 15)) padding-box padding-box, linear-gradient(135deg, rgb(224, 132, 166) 0%, rgb(99, 77, 160) 42%, rgb(85, 20, 72) 100%) border-box border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+    transform: scale(1.05); 
+}
+
+/* Responsiveness*/
+@media (max-width: 768px) {
+    .home .container header .logo {
+        width: 10em;  
+    }
+    .home .container header .ClubLine .X {
+        width: 1em;
+    }
+    .home .container header .ClubLine .Club {
+        width: 5em;
+    }
+    .homePage h1 {
+        font-size: 23px;
+    }
+    .homePage h3 {
+        font-size: 1em;
+    }
+    .homePage .search-button {
+        gap: 15px;
+    }
+    .homePage button {
+        width: 140px;
+        height: 130px;
+        font-size: 16px;
+    }
+    .homePage button img {
+        width: 45px;
+        margin-bottom: 10px;
+    }
+}
+
+/* --- Subtle DJ Admin Button --- */
+.dj-login-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.4);
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-family: Proxima, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.dj-login-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.5);
+}

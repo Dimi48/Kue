@@ -1,0 +1,70 @@
+.payment .container .queueTitle {
+    font-size: 1.3rem;
+    color: rgb(253,253,253);
+    font-weight: bold;
+    padding-top: 25px;
+    letter-spacing: 2px;
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0.47) 0%, rgb(220, 20, 122) 50%, rgb(142, 118, 157) 100%) 1 / 1 / 0 stretch;
+}
+
+.songDisplay .trackss {
+    width: 100%;
+    padding: 10px 7px 0px 40px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.songDisplay .trackRow {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    padding: 2px 5px 10px 5px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.songDisplay .trackInfo {
+    flex: 0 0 auto;
+    width: 55%;
+    text-decoration: none;
+    position: absolute;
+    bottom: -6px;
+    left: 60px;
+}
+
+.songDisplay .trackInfo ul {
+    list-style: none;
+    line-height: 18px;
+    margin-top: -5px;
+    margin-left: -25px;
+}
+
+.songDisplay .trackInfo .artist {
+    font-size: 13px;
+    font-weight: 550;
+    color: #9f9c9c;
+}
+
+.songDisplay .trackInfo .title {
+    font-weight: bold;
+    margin-top: -5px;
+}
+
+@media (max-width: 535px) {
+    .payment .songDisplay .trackInfo .title {
+      font-size: 15px;
+    }
+    .payment .queueTitle {
+      font-size: 1.2rem;
+    }
+    .payment .trackInfo {
+      width: 220px;
+    }
+    .payment .trackss {
+        padding: 10px 7px 0px 20px;
+    }
+    
+  }
